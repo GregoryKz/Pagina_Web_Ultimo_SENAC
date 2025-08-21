@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo animado líquido multicolorido */
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f0f0f0;
+  background: linear-gradient(-45deg, #0d0d1a, #1a1a40, #240046, #3f0071, #0096c7);
+  background-size: 400% 400%;
+  animation: liquido 18s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes liquido {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container futurista */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 650px;
+  width: 90%;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.2),
+              0 0 40px rgba(180, 0, 255, 0.2);
+  animation: pulseGlow 5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from { box-shadow: 0 0 20px rgba(0, 200, 255, 0.2); }
+  to   { box-shadow: 0 0 50px rgba(255, 0, 255, 0.5); }
+}
+
+/* Títulos */
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(0, 200, 255, 0.8),
+               0 0 25px rgba(180, 0, 255, 0.6);
+}
+
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Inputs */
+input {
+  background: rgba(255,255,255,0.07);
+  color: #f8f9fa;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+/* Botões & Links com efeito energia */
+button, a {
+  background: linear-gradient(90deg, #ff00ff, #00e5ff, #7b2ff7);
+  background-size: 200% auto;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 12px;
+  padding: 12px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+button:hover, a:hover {
+  background-position: right center;
+  box-shadow: 0 0 20px #00e5ff, 0 0 40px #ff00ff;
+  transform: translateY(-2px);
+}
+
+/* Efeito de laser passando */
+button::after, a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: 0.6s;
+}
+
+button:hover::after, a:hover::after {
+  left: 100%;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+ul li {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,0,255,0.2);
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background: rgba(255,0,255,0.15);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,200,255,0.3);
+}

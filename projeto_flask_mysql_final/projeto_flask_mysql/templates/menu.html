@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Bem-vindo, {{ usuario }}!</h2>
+    <ul>
+        <li><a href="{{ url_for('calc') }}">Calculadora</a></li>
+        <li><a href="{{ url_for('idade') }}">Verificar idade</a></li>
+        <li><a href="{{ url_for('lista') }}">Exemplo de lista</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</body>
+</html>

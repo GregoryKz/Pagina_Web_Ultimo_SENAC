@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h2>Lista de Números</h2>
+    <ul>
+        {% for num in numeros %}
+        <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu') }}">Voltar ao Menu</a>
+</body>
+</html>

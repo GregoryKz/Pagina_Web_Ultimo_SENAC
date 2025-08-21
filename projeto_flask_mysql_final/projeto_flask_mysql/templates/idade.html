@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Idade</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h2>Verificar Idade</h2>
+    <form method="POST">
+        Digite sua idade: <input type="text" name="idade"><br>
+        <button type="submit">Verificar</button>
+    </form>
+    {% if mensagem %}<p>{{ mensagem }}</p>{% endif %}
+    <a href="{{ url_for('menu') }}">Voltar ao Menu</a>
+</body>
+</html>
